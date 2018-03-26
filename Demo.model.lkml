@@ -19,6 +19,7 @@ explore: events {
     sql_on: ${events.user_id} = ${users.id} ;;
     relationship: many_to_one
   }
+  persist_for: "4 hours"
 }
 
 explore: inventory_items {
@@ -27,6 +28,7 @@ explore: inventory_items {
     sql_on: ${inventory_items.product_id} = ${products.id} ;;
     relationship: many_to_one
   }
+  persist_for: "4 hours"
 }
 
 explore: order_items {
@@ -53,6 +55,7 @@ explore: order_items {
     sql_on: ${orders.user_id} = ${users.id} ;;
     relationship: many_to_one
   }
+  persist_for: "4 hours"
 }
 
 explore: orders {
@@ -61,6 +64,7 @@ explore: orders {
     sql_on: ${orders.user_id} = ${users.id} ;;
     relationship: many_to_one
   }
+  persist_for: "4 hours"
 }
 
 explore: products {}
