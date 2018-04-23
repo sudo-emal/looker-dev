@@ -1,5 +1,6 @@
 view: user_facts {
   derived_table: {
+    persist_for: "6 hours"
     sql: /*
       User ID
       Total number of orders
