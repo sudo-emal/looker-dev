@@ -61,6 +61,11 @@ explore: orders {
     sql_on: ${orders.user_id} = ${users.id} ;;
     relationship: many_to_one
   }
+  join: user_facts {
+    type: left_outer
+    sql_on: ${user_facts.id} = ${orders.user_id} ;;
+    relationship: many_to_one
+  }
 }
 
 explore: products {}
@@ -78,3 +83,5 @@ explore: user_data {
 explore: users {}
 
 explore: users_nn {}
+
+explore: user_data_with_c {}
