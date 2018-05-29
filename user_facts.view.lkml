@@ -1,5 +1,6 @@
 view: user_facts {
   derived_table: {
+    indexes: ["id"]
     persist_for: "6 hours"
     sql: /*
       User ID
