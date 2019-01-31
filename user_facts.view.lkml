@@ -14,10 +14,12 @@ view: user_facts {
 
       select
       u.id
+      , CAST(18.1750000000000000000000 AS DECIMAL(10,5)) as test
       , count(o.id) as total_orders
       , min(o.created_at) as first_order
       , max(o.created_at) as last_order
       , if(der.total_orders > 1, true, false) as is_repeat_customer
+
       -- , timestampdiff(month, min(o.created_at), max(o.created_at)) as month_diff
       , ifnull(
           case

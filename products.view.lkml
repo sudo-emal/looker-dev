@@ -12,6 +12,12 @@ view: products {
     sql: ${TABLE}.brand ;;
   }
 
+  filter: brand_filter {
+    type: string
+    suggest_dimension: brand
+
+  }
+
   dimension: category {
     type: string
     sql: ${TABLE}.category ;;

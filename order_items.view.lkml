@@ -34,6 +34,10 @@ view: order_items {
     sql: ${TABLE}.returned_at ;;
   }
 
+  filter: global_timeframe {
+    type: date_time
+  }
+
 ### Help Center Templated Filter Test Starts Here
 ## filter determining time range for all "A" measures
 

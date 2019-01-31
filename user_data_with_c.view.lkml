@@ -6,6 +6,13 @@ view: user_data_with_c {
        ;;
   }
 
+derived_table: {
+  sql: SELECT id FROM users
+      union all
+      SELECT CAST(18.1750000000000000000000 AS DECIMAL(10,5))
+order by 1 ;;
+}
+
   measure: count {
     type: count
     drill_fields: [detail*]
@@ -14,7 +21,9 @@ view: user_data_with_c {
   dimension: id {
     type: number
     sql: ${TABLE}.id ;;
+    value_format_name: decimal_2
   }
+
 
   dimension: email {
     type: string
